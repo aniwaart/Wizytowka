@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacja</title>
+    <style>
+        body{
+            background-color: #222122;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        @property --angle{
+    syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+}
+        H1{
+            text-align: center;
+           font-size: 16PX;
+           color: #006aff;      
+ }
+.card {
+    margin: 0 auto;
+    padding: 2em;
+    width: 300px;
+    background-color: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    color: snow;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+.card::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),#ff4545,#00ff99,#006aff,#ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.card::before{
+    filter: blur(1.5rem);
+    opacity: 0.8;
+    
+}
+
+@keyframes spin{
+
+    from {
+        --angle:0deg;
+
+    } 
+    to  {
+        --angle:360deg;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <div class="card"> <h1>MIGAJACY KURSOR</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quasi, exercitationem saepe dignissimos et, ipsa iure quo corporis repellat nulla iusto dolores dolore molestias consequatur sit tenetur provident quam neque similique accusantium quas. Alias laudantium placeat labore iste voluptatem magnam consectetur cumque doloremque culpa aliquam.</div>
+</body>
+</html>
