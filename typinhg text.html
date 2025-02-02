@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #2f3542;
+            color: snow;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poopins', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+        }
+        .animate-text {
+            min-width: 280px;
+           
+        }
+
+        .animate-text span {
+            position: relative;
+        }
+        .animate-text span::before {
+            content: "Programmer";
+            color: orange;
+            animation: words 20s infinite;
+
+
+        }
+
+        .animate-text span::after {
+            content: "";
+            position: absolute;
+            width: calc(100% +8px);
+            height: 100%;
+            background-color: #2f3542;
+            border-left: 2px solid orange;
+            right:-8px;
+            animation: cursor .8s infinite, typing 20s steps(14) infinite;
+          
+       }
+
+       @keyframes cursor {
+            to{
+                border-left: 2px solid #ff7f5000;
+            }
+       }
+
+       @keyframes words {
+            0%,20%{
+                content: "Programmer";
+            }
+
+            21%,40%{
+                content: "Blooger";
+            }
+
+            41%,60%{
+                content: "Developer";
+            }
+
+            61%,80%{
+                content: "Ceo";
+            }
+            81%,100%{
+                content: "Designer";
+            }
+
+
+       }
+
+       @keyframes typing {
+            10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+               width: 0;
+            }
+            
+                5%,20%,25%,40%,45%,60%,65%,80%,85%{
+                    width: calc(100% + 8px);
+                }
+            }
+        
+
+    </style>
+</head>
+<body>
+    <div class="animate-text">
+        I'm a <span></span>
+    </div>
+</body>
+</html>
