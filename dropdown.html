@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  
+}
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown button{
+   
+            background-color: rgb(124, 16, 16);
+            color: snow;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            min-width: 110px;
+            margin: 0 auto;
+
+        }
+        .dropdown a {
+            display: block;
+            color: #212121;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: ease-in 2s;
+        }
+
+        .dropdown .content{
+            display: none;
+            position: absolute;
+            background-color: rgb(124, 16, 16 ,50%);
+            min-width: 120px;
+            box-shadow: 2px 2px 5px #d704ebee;
+
+        }
+        .dropdown:hover .content{
+            display: block;
+            
+        }
+
+        .dropdown:hover button{
+           background-color: rgb(124, 16, 16 ,90%);
+
+        }
+
+        .dropdown a:hover {
+            background-color: rgb(124, 16, 16 ,40%);
+        }
+
+        p  {
+            position: relative;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+
+        <button class="button">Najedz </button>
+        <div class="content">
+            <a href="#">Zielony</a>
+            <a href="#">Niebieski</a>
+            <a href="#">Fioletowy</a>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ipsum eius, delectus cum iure praesentium a minus corporis placeat aliquam ipsa illum cupiditate veritatis consequuntur!</p>
+</body>
+</html>
