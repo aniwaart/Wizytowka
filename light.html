@@ -24,6 +24,7 @@
             justify-content: center;
             background-color: #001300;
             animation: changeColor 5s linear infinite;
+            flex-wrap: wrap;
          
         }
         @keyframes changeColor {
@@ -38,10 +39,11 @@
         section .loader{
             position: relative;
             display: flex;
+        
         }
         section .loader .dot{
             position: relative;
-            display: block;
+    
             width: 20px;
             height: 20px;
             background-color: #00ffa0;
@@ -64,6 +66,7 @@
             }
             10%{
                 transform: scale(1);
+
             }
             50%,100%{
                 transform: scale(0.1);
@@ -74,8 +77,10 @@
                     color: #fff;
                     font-family: 'consolas',Verdana, Geneva, Tahoma, sans-serif;
                     font-weight: 600;
-                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
                     display: block;
+                    position: relative;
                 }
                 
                 section .loader:last-child .dot{
