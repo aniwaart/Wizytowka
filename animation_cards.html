@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards animes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inconsolata',Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+          display: flex;
+          min-height: 100vh;
+          background-color: #212121;
+        }
+        .wrapper{
+            display: flex;
+            position: center;
+            align-items: center;
+            justify-content:inherit;
+            color: snow;
+            margin: 40px auto;
+        }
+
+        .container 
+        {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        
+        }
+
+        .container .box {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1a1a1f;
+            transition: 0.5s;
+            overflow: hidden;
+
+        }
+        .container .box:hover {
+            background-color: #03e9f4;
+            z-index: 1000;
+            box-shadow: 0 0 5px #03e9f4,
+            0 0 25px #03e9f4,
+            0 0 50px #03e9f4,
+            0 0 200px #03e9f4;
+      
+            
+
+        }
+        .container .content .box{
+            color: #03e9f4;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container .box:hover .content{
+            color: #111;
+        }
+
+        .container .box .content h2{
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 10px;
+
+        }
+        .container .box .content p{
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 10px;
+
+        }
+        .container .box:nth-child(1){
+            filter: hue-rotate(90deg);
+        }
+
+        .container .box:nth-child(3){
+            filter: hue-rotate(270deg);
+            scale: (1.2);
+        }
+        .container .box span
+        {
+            position: absolute;
+            display: block;
+        }
+        .container .box span:nth-child(1){
+            
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 5px;
+            background:linear-gradient(90deg, transparent, #03e9f4);
+            animation: animate1 2s linear infinite;
+            animation-delay: 0s;
+
+        }
+        @keyframes animate1 {
+            
+            0%{
+                left:-100%;
+            }
+            50%,100%{
+                left:100%;
+            }
+        }
+
+        .container .box span:nth-child(3){
+            
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 5px;
+            background:linear-gradient(270deg, transparent, #03e9f4);
+            animation: animate3 2s linear infinite;
+            animation-delay: 1s;
+
+        }
+        @keyframes animate3 {
+            
+            0%{
+                right:-100%;
+            }
+            50%,100%{
+                right:100%;
+            }
+        }
+
+        .container .box span:nth-child(2){
+            
+            top: -100%;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background:linear-gradient(180deg, transparent, #03e9f4);
+            animation: animate2 2s linear infinite;
+            animation-delay:  0.5s;
+
+        }
+        @keyframes animate2 {
+            
+            0%{
+                top:-100%;
+            }
+            50%,100%{
+                top:100%;
+            }
+        }
+
+        
+        .container .box span:nth-child(4){
+            
+            bottom: -100%;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background:linear-gradient(360deg, transparent, #03e9f4);
+            animation: animate4 2s linear infinite;
+            animation-delay: 1.5s;
+
+        }
+        @keyframes animate4 {
+            
+            0%{
+                bottom:-100%;
+            }
+            50%,100%{
+                bottom:100%;
+            }
+        }
+        .container .box:hover span{
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            <div class="content">
+                <div>
+                    <h2>Animowany Box </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis nemo molestiae fugit ex quia illo quos alias architecto placeat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            <div class="content">
+                <div>
+                    <h2>Animowany Box 2 </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis nemo molestiae fugit ex quia illo quos alias architecto placeat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            <div class="content">
+                <div>
+                    <h2>Animowany Box 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis nemo molestiae fugit ex quia illo quos alias architecto placeat.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+</body>
+</html>
